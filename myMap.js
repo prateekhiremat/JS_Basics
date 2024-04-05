@@ -114,8 +114,8 @@ map.set(4,'D');
 map.set(5,'E');
 map.set(3,'F');
 
-// map.entries();
-// console.log(map.size);
+map.entries();
+console.log(map.size);
 
 // console.log(map.get(4));
 
