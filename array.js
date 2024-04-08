@@ -56,3 +56,16 @@ let str = 'abcde';
 let a = Array.from(str);
 console.log(a);
 console.log(a.includes('a'));
+//Array to String
+let arrToStr = arr.join('+');
+console.log(arrToStr);//5,105,1
+console.log(typeof arrToStr);//string
+
+arr.reverse();
+console.log(arr);//[ 1, 105, 5 ]
+
+console.log(a.reverse().toString().replaceAll(',',''));//edcba
+console.log(a.reverse().join(''));//edcba
+
+arr.sort((a,b)=>a-b);
+console.log(arr)
