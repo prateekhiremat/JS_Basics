@@ -175,7 +175,7 @@ list.add(7);
 // console.log(list.deleteFirst());
 // list.toString();
 
-list.toString();
+// list.toString();
 // console.log(list.deleteLast());
 // list.toString();
 

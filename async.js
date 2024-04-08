@@ -6,7 +6,7 @@ async function processData() {
     const result = await fetchData();
     console.log(result);
 }
-processData();
+// processData();
 
 //2
 async function fetchUserData(userId) {
@@ -23,8 +23,8 @@ async function processUser(userId) {
       console.error('Error:', error.message);
     }
 }
-processUser(1);
-processUser(-1);
+// processUser(1);
+// processUser(-1);
 
 //3
 function first(a,b){
@@ -49,7 +49,7 @@ async function caller(){
         console.log(e.message); //console.log(e);
     }
 }
-caller();
+// caller();
 
 //4
 async function fetchResource1() {
@@ -72,4 +72,19 @@ const getFacts = async ()=>{
     let res = await fetch("https://cat-fact.herokuapp.com/facts");
     console.log(res);
 }
-getFacts();
+// getFacts();
+
+//
+function sqr(a){
+    return new Promise((resolve, reject)=>{
+        console.log(a*a);
+        resolve();
+    })
+}
+async function a(){
+    await sqr(2);
+    await sqr(3);
+    await sqr(4);
+    await sqr(5);
+}
+// a();

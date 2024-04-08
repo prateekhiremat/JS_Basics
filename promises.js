@@ -4,7 +4,7 @@ let promis1 = new Promise(function(resolve,reject){
 });
 promis1.then((msg)=>{
     console.log(msg);
-})
+});
 
 //2
 let promis2 = new Promise(function(resolve,reject){
@@ -16,7 +16,7 @@ promis2.catch((value) => {
 
 //3
 let solution = new Promise((resolve,reject)=>{
-    if(resolve){
+    if(!resolve){
         resolve("Resolved");
     }else{
         reject("Rejected");
@@ -48,8 +48,8 @@ function sqr(a){
         resolve();
     })
 }
-sqr(2).then((res)=>{
-    sqr(3).then((res)=>{
+sqr(2).then(()=>{
+    sqr(3).then(()=>{
         sqr(4).then(()=>{})
     })
 })
