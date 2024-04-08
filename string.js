@@ -13,9 +13,12 @@ str = str.replace('d','z');
 console.log(str);
 str = str.replaceAll('a','x');
 console.log(str);
-console.log(str2.charAt());
+console.log(str2.charAt(2));
 console.log(str2.slice(2, 5));
 console.log(str2.endsWith('k'));
 console.log(str2.includes('a'));
 console.log(str2.indexOf('l'));
 console.log(str2.lastIndexOf('k'));
+
+let strToArr = str2.split('');
+console.log(strToArr);

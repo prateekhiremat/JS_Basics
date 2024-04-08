@@ -140,3 +140,20 @@ solution.then((result)=>{
 }).finally(()=>{
     console.log('finally executed');
 })
+
+//ES9-2
+//regexp
+
+//ES10-1
+let flat1 = [1,2,3,[4,5,6]];
+console.log(flat1.flat());//returns new array
+let flat2 = [1,2,3,[4,5,[6]]];
+console.log(flat1.flat().flat());//[ 1, 2, 3, 4, 5, 6 ]
+
+//ES10-2
+let array = ["aj", "", "hjklbn"];
+let map = array.map(s => s.split(""))
+console.log(map);
+
+let flatmap = array.flatMap(s => s.split(""));
+console.log('flatmap',flatmap);

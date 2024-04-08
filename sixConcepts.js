@@ -64,13 +64,15 @@ let nameObj = {
 
 let PrintName = { 
 	name: "steve", 
-	sayHi: function (age) { 
-		console.log(this.name + " age is " + age); 
+	sayHi: function (age,h,a,b) { 
+		console.log(this.name + " age is " + age + h + a + b); 
 	} 
 } 
 
-PrintName.sayHi.call(nameObj, 42);
+PrintName.sayHi();
 
-PrintName.sayHi.bind(nameObj)(); 
+const print = PrintName.sayHi.call(nameObj, 42 , 50 , 60);
 
-PrintName.sayHi.apply(nameObj,[50]);
+const print2 = PrintName.sayHi.bind(nameObj,50,60,30); 
+
+PrintName.sayHi.apply(nameObj,[50, 25,30]);

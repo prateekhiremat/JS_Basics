@@ -24,5 +24,5 @@ let student = {
     },
     thisInArrowF:()=>{console.log("student",this.name);}
 }
-student.thisInRegularF();
-student.thisInArrowF();
+student.thisInRegularF();//student Prateek
+student.thisInArrowF();//student
