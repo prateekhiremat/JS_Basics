@@ -20,16 +20,13 @@ class MyGraph{
     bfs(){
         let visited = [];
         let queue = new MyQueue();
-
         let str = '';
-
         let start = this.graph[0][0].src;
         queue.enqueue(start);
 
         while(!queue.isEmpty()){
             let val = queue.dequeue();
             if(!visited.includes(val)){
-
                 str+=val+' ';
                 visited.push(val);
             }
@@ -38,12 +35,9 @@ class MyGraph{
                 queue.enqueue(vertex.dest);
             }
         }
-
-        console.log(visited);
         console.log(str);
-
     }
-    //Depth First Search
+    // Depth First Search
     dfs(start=this.graph[0][0].src,visited=[],stack=new MyStackArray()){
         stack.push(start);
         visited.push(start);
@@ -58,11 +52,23 @@ class MyGraph{
             let e = this.graph[start][i].dest;
             if(!visited.includes(e)){
                 this.dfs(e,visited,stack);
-
             }
         }
         return visited;
     }
+
+    // dfs(node=this.graph[0],result=[],visited=[],stack=new MyStackArray()){
+    //     stack.push(node);
+    //     visited.push(node);
+    //     result.push(node[0].src);
+    //     for(let i=0; i<this.graph.length;i++){
+    //         if(!visited.includes(this.graph[i])){
+    //             this.dfs(this.graph[i],result,visited,stack);
+    //             stack.pop();
+    //         }
+    //     }
+    //     return result;
+    // }
 }
 //   0
 //    \    3
@@ -77,43 +83,27 @@ str.add(new Edge(3,2), new Edge(3,1));
 
 // console.log(str.graph);//structure of graph
 
-
-// console.log(str.graph[2]);
-
-// console.log(str1.graph[3].length);//no. of adjecent,neighbouring node/vertex
-
-// str.bfs();
-// console.log(str.dfs())
-
-//     1 --- 3                                   
-//    /      | \                                 val = 1
-//   0       |  5 -- 6                            visited[0,1,2,3]
-]
 // console.log(str1.graph[2]);
 
 // console.log(str1.graph[3].length);//no. of adjecent,neighbouring node/vertex
 
-str.bfs();
-// console.log(str.dfs())
+// str.bfs();
+console.log(str.dfs())
 
 //     1 --- 3
 //    /      | \
 //   0       |  5 -- 6
-
 //    \      | /
 //     2 --- 4
 
 let stru = new MyGraph();
-stru.add(new Edge(0,1), new Edge(0,2));
-stru.add(new Edge(1,0), new Edge(1,3));
-stru.add(new Edge(2,0), new Edge(2,4));
-stru.add(new Edge(3,1), new Edge(3,4), new Edge(3,5));
-stru.add(new Edge(4,2), new Edge(4,3), new Edge(4,5));
-stru.add(new Edge(5,3), new Edge(5,4), new Edge(5,6));
-stru.add(new Edge(6,5));
+stru.add(new Edge(7,1), new Edge(7,2));
+stru.add(new Edge(1,7), new Edge(1,3));
+stru.add(new Edge(2,7), new Edge(2,4));
+stru.add(new Edge(3,1), new Edge(3,4), new Edge(3,8));
+stru.add(new Edge(4,2), new Edge(4,3), new Edge(4,8));
+stru.add(new Edge(8,3), new Edge(8,4), new Edge(8,6));
+stru.add(new Edge(6,8));
 
-
-// stru.bfs();
-console.log(stru.dfs());
 stru.bfs();
 // console.log(stru.dfs());

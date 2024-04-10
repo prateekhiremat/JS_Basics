@@ -10,8 +10,6 @@ class MyMap{
     constructor(){
         this.head = null;
         this.size = 0;
-        this.key = null;
-        this.value = null;
     }
 
     set(key, value){
@@ -114,8 +112,8 @@ map.set(4,'D');
 map.set(5,'E');
 map.set(3,'F');
 
-map.entries();
-console.log(map.size);
+// map.entries();
+// console.log(map.size);
 
 // console.log(map.get(4));
 
@@ -123,6 +121,7 @@ console.log(map.size);
 // map.entries();
 
 // map.clear();
+// map.entries();
 
 // map.keys();
 // map.values();
